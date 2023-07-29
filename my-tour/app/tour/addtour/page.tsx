@@ -2,7 +2,6 @@
 
 import {
   addTourHandler,
-  makeAlbumInGitHubRepo,
 } from '@/app/actions/tourActions'
 import React, { useState, useTransition } from 'react'
 
@@ -13,18 +12,14 @@ const AddTour = () => {
   const [name, setTourName] = useState('')
   const [description, setDescription] = useState('')
   const [date, setDate] = useState(new Date().toDateString())
-  const [profileimage, setProfileImage] = useState('')
-  const [albumname, setAlbumname] = useState('')
-
+   
   const [isPending, startTransition] = useTransition()
 
   const addTourToDatabase = async () => {
   addTourHandler({
       name,
       description,
-      date,
-      profileimage,
-      albumname,
+      date
     }) 
      
     // .then(async (newTour:{'MyTour':TourMaster})=>{
@@ -99,31 +94,7 @@ const AddTour = () => {
         className={textboxStyle}
         onChange={(e) => setDate(e.target.value)}
       />
-
-      <label htmlFor="name" className="pl-3">
-        {' '}
-        Profile Image
-      </label>
-      <input
-        type="text"
-        placeholder="Tour profile image"
-        name="profileimage"
-        className={textboxStyle}
-        value={profileimage}
-        onChange={(e) => setProfileImage(e.target.value)}
-      />
-
-      <label htmlFor="name" className="pl-3">
-        Album Name
-      </label>
-      <input
-        type="text"
-        placeholder="Tour album name"
-        name="albumname"
-        className={textboxStyle}
-        value={albumname}
-        onChange={(e) => setAlbumname(e.target.value)}
-      />
+ 
 
       <div className="max-w-sm mx-auto pb-2">
         <button className="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75">

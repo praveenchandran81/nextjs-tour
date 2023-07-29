@@ -1,6 +1,7 @@
 "use server";
 
 export const makeAlbumInGitHubRepo = async (id: string) => {
+  console.log('tourid',id);
   
   const body = {
     message: "sample file",
@@ -26,10 +27,10 @@ export const addTourHandler = async (
 ) => {
   const bodyData: Partial<TourMaster> = {
     name: tourDetails.name,
-    albumname: tourDetails.albumname,
+  //  albumname: tourDetails.albumname,
     description: tourDetails.description,
     date: tourDetails.date,
-    profileimage: tourDetails.profileimage,
+   // profileimage: tourDetails.profileimage,
   };
   const apiUrl =
     process.env.NODE_ENV === "production"
