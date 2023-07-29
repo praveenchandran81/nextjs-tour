@@ -18,4 +18,4 @@ put
   "content": "aGVsbG8="
 }
 Content-Type: application/json
-Authorization: Bearer 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
+Authorization: Bearer token
