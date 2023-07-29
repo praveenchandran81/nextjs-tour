@@ -10,7 +10,7 @@ CREATE TABLE tourmaster (
 )
 
 
-nextjstour token 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
+
 
 https://api.github.com/repos/praveenchandran81/nextjs-tour/contents/tourimages/12/sample.txt
 put
